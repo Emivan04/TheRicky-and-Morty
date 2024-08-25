@@ -1,0 +1,149 @@
+/* Основные стили и сброс */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f0f0f0;
+}
+
+/*? Общие настройки текста */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*! Основные блоки */
+.container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+#about-greeting,
+#about-valediction {
+	text-align: center;
+	font-size: 17px;
+	background-color: white;
+	color: #1f0229;
+	padding: 28px;
+}
+
+.about-greeting-text {
+	font-size: 60px;
+	padding: 10px;
+}
+
+/*! Основной контент персонажей */
+.block-story {
+	padding: 40px;
+	background-color: #1f0229;
+}
+
+#character-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.character-card {
+	width: 350px;
+	padding: 15px;
+	margin: 10px;
+	border-radius: 18px;
+	background-color: #350535;
+	color: white;
+	text-align: center; /* Выравнивание текста */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.character-card img {
+	width: 250px;
+	border-radius: 18px;
+}
+
+.character-info h2 {
+	margin: 10px 0;
+	font-size: 1.9em;
+}
+
+.character-info p {
+	margin: 5px 0;
+}
+
+strong {
+	color: rgb(240, 10, 209);
+}
+
+/** Кнопки */
+#load-more {
+	width: 120px;
+	height: 40px;
+	margin: 2% auto;
+	border-radius: 20px;
+	background-color: white;
+	color: #1f0229;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+	display: block;
+}
+
+#load-more:hover {
+	background-color: #350535;
+	color: white;
+}
+
+/*! Footer */
+.my-socialMedia {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-logo-img {
+	width: 50px;
+	margin: 15px;
+}
+
+.text-p {
+	padding: 15px 0;
+}
+
+/*** Адаптивные стили */
+@media (max-width: 768px) {
+	.container {
+		padding: 0 10px;
+	}
+
+	.block-story {
+		padding: 40px;
+	}
+
+	.character-card {
+		width: 180px; /* Перепрыгивает в одну колонку на маленьких экранах */
+		max-width: 300px;
+		font-size: 8px;
+	}
+
+	.character-card img {
+		width: 150px;
+	}
+
+	#load-more {
+		width: 70px;
+		height: 20px;
+		font-size: 10px;
+	}
+
+	#about-valediction {
+		font-size: 10px;
+	}
+
+	.footer-logo-img {
+		width: 25px;
+	}
+}
